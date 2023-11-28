@@ -1,0 +1,32 @@
+.product {
+    border: 1px solid #ccc; /* Add a border to the product block */
+    padding: 20px; /* Add some padding for spacing */
+    margin: 10px; /* Add margin for spacing between blocks */
+    text-align: center; /* Center-align content */
+    display: inline-block; /* Ensure all blocks are displayed in a row */
+    width: 200px; /* Set a fixed width for consistency */
+    border-radius: 10px;
+    border-spacing: inherit;
+}
+
+.product img {
+    max-width: 100%; /* Ensure images don't overflow the block */
+    cursor: pointer;
+}
+
+.product h2 {
+    font-size: 18px; /* Customize heading size */
+}
+
+.product p {
+    font-size: 16px; /* Customize price font size */
+}
+
+.product button {
+    background-color: #007bff; /* Customize button background color */
+    color: #fff; /* Customize button text color */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}

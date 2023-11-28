@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update MyAdmin</title>
+    <style>
+        .header {
+            background-color: #efefef;
+            color: #110f0f;
+            padding: 20px; 
+            text-align: center;
+        }
+
+        .product {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            display: inline-block;
+            width: 200px;
+            border-radius: 10px;
+            border-spacing: inherit;
+            margin-bottom: 100px; 
+        }
+
+        .product img {
+            max-width: 100%;
+            cursor: pointer;
+        }
+
+        .product button {
+            background-color: #007bff; 
+            color: #170d0d; 
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 10px;
+        }
+
+        .product h2 {
+            font-size: 18px;
+        }
+        /* Your existing styles */
+
+/* Styles for checkboxes */
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Style for the container holding the checkboxes */
+.checkbox-container {
+    margin-top: 10px;
+}
+
+/* Style for the labels next to checkboxes */
+label[for="sofa"],
+label[for="wardrobe"],
+label[for="dining"],
+label[for="bed"] {
+    margin-right: 10px;
+    color: #333; /* Adjust the color as needed */
+}
+
+/* Additional styling if needed */
+
+    </style>
+</head>
+<body>
+    <form action="index.php" method="post">
+    <div class="header">
+        <h2>Select The Product To be Updated</h2>
+    </div>
+    <div class="product">
+        <img src="sofa7.jpg" alt="product1"/>
+        <h2>Sofas</h2>
+        <button class="updateButton" name="product" value="sofa">Update Now</button>
+    </div>
+    <div class="product">
+        <img src="w7.jpg" alt="product1"/>
+        <h2>Wardrobes</h2>
+        <button class="updateButton" name="product" value="wardrobes">Update Now</button>
+    </div>
+    <div class="product">
+        <img src="d7.jpg" alt="product1"/>
+        <h2>Dining Table</h2>
+        <button class="updateButton" name="product" value="dining">Update Now</button>
+    </div>
+    <div class="product">
+        <img src="b6.png" alt="product1"/>
+        <h2>Beds</h2>
+        <button class="updateButton" name="product" values="beds">Update Now</button>
+    </div>
+</form>
+    <script>
+        // Get all elements with class "updateButton"
+        var updateButtons = document.getElementsByClassName('updateButton');
+
+        // Add a click event listener to each button
+        for (var i = 0; i < updateButtons.length; i++) {
+            updateButtons[i].addEventListener('click', function() {
+                // Redirect to index.php when any button is clicked
+                window.location.href = 'index.php';
+            });
+        }
+    </script>
+</body>
+</html>
