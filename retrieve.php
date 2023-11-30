@@ -10,11 +10,12 @@ function dataFilter($data)
 }
 
 session_start();
-require 'db_conn.php';
+
 
 if (isset($_GET['submit'])) {
     $conn = include 'db_conn.php'; // Assuming db_conn.php returns a valid database connection
-    $sql = "SELECT * FROM sofa WHERE id = 7";
+    $id = "SELECT id FROM sofa where id = max(id)";
+    $sql = "SELECT * FROM sofa WHERE id = $id";
     $result = $conn->query($sql);
 }
 
